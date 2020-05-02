@@ -1,0 +1,41 @@
+<div  *ngIf="advertisement">
+   
+  <div>
+  <label  >Name: </label>  {{advertisement.name}}
+  <input type ="text" name="name"   [(ngModel)]="advertisement.name"><br/><br/>
+  </div>
+
+   <div>
+      <label >State: </label> {{advertisement.state}}
+      <input type ="text" name="state" [(ngModel)]="advertisement.state"><br/><br/>
+  </div>
+    
+  <div>
+    <label>Area: </label> {{advertisement.area}}
+    <input type ="text" name="area" [(ngModel)]="advertisement.area"><br/><br/>
+  </div>
+  <div>
+      <label >PinCode: </label> {{advertisement.pinCode}}
+      <input type ="text" name="pincode" [(ngModel)]="advertisement.pinCode"><br/><br/>
+    </div>
+    <div>
+        <label >PropertyType: </label> {{advertisement.propertyType}}
+        <input type ="text" name="propertyType" [(ngModel)]="advertisement.propertyType"><br/><br/>
+      </div>
+  <div>
+    <button >Active: </button> {{advertisement.active}}
+
+  </div>
+  
+ 
+  <span class="button is-small btn-primary" *ngIf='advertisement.active' (click)='updateActive(false)'>Inactive</span>
+ 
+  <span class="button is-small btn-primary" *ngIf='!advertisement.active' (click)='updateActive(true)'>Active</span>
+ 
+  <span class="button is-small btn-danger" (click)='deleteAdvertisement()'>Delete</span>
+  
+</div>
+<router-outlet></router-outlet>
+
+
+

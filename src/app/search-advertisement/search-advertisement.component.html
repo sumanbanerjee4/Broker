@@ -1,0 +1,62 @@
+<h3>Find By Area</h3>
+
+<!-- <div class="container">
+  <header class="cell cell-1">Header</header>
+  <aside class="cell cell-2">Left sidebar</aside>
+  <main class="cell cell-3">Main content</main>
+  <aside class="cell cell-4">Right sidebar</aside>
+  <footer class="cell cell-5">Footer</footer>
+</div>    -->
+
+<div class="wrapper">
+  <div class="home-hero">
+    <div class="feature">
+      <h3>We like balloons</h3>
+      <p>You can find all kinds of balloon related things here.</p>
+    </div>
+    <div class="special">
+      <h3>Special Shapes</h3>
+      <p>Why are some of them so scary looking?</p>
+  
+    </div>
+    <div class="amazing">
+      <h3>10 things you discover when taking a balloon ride.</h3>
+      <p>Number 8 will AMAZE you.</p>
+    </div>
+    <div class="news">
+      <h3>Angry people at balloon fiestas</h3>
+      <p>Hot air balloons. A bit weather sensitive. </p>
+     
+      
+  
+    </div>
+    <div class="photos"><h3>Balloon photos</h3>
+      <p>I have quite a few.</p></div>
+    <div class="cta"><p>Sign up for more information about balloons. </p>
+      <a class="spam-button" href="/spam-machine">Sign me up!</a></div>
+    
+   
+  
+  </div>
+  </div>
+
+
+
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="lastname">Area</label>
+      <input type="text" class="form-control" id="area" required [(ngModel)]="area" name="area">
+    </div>
+ 
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<ul>
+  <li *ngFor="let advertisement of advertisements">
+    <h4>{{advertisement.id}} - {{advertisement.name}} {{advertisement.area}}</h4>
+  </li>
+</ul>
+<router-outlet></router-outlet>
